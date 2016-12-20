@@ -34,13 +34,4 @@ def scrape_list(url)
   end
 end
 
-term = { 
-  id: 14,
-  name: "14th Legislative Assembly",
-  start_date: "2013-03-20",
-  end_date: "2015-06-17",
-  source: "http://www.norfolkisland.gov.nf/legislativeassembly/legislativeassembly.html",
-}
-ScraperWiki.save_sqlite([:id], term, 'terms')
-
-scrape_list(term[:source])
+scrape_list('http://www.norfolkisland.gov.nf/legislativeassembly/legislativeassembly.html')
